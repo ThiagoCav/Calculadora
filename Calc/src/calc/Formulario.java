@@ -118,6 +118,11 @@ public class Formulario extends javax.swing.JFrame {
         });
 
         jButton11.setText("*");
+        jButton11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton11ActionPerformed(evt);
+            }
+        });
 
         jButton12.setText("1");
         jButton12.addActionListener(new java.awt.event.ActionListener() {
@@ -346,6 +351,10 @@ public class Formulario extends javax.swing.JFrame {
         if(sinal == "subtracao"){
             txtResultado.setText(String.valueOf(valor1 - valor2));
         }
+        
+        if(sinal == "multiplicacao"){
+            txtResultado.setText(String.valueOf(valor1 * valor2));
+        }
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -354,6 +363,13 @@ public class Formulario extends javax.swing.JFrame {
         txtResultado.setText("");
         sinal = "subtracao";
     }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+        
+        valor1 = Double.parseDouble(txtResultado.getText());
+        txtResultado.setText("");
+        sinal = "multiplicacao";
+    }//GEN-LAST:event_jButton11ActionPerformed
 
     /**
      * @param args the command line arguments
