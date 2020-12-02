@@ -111,6 +111,11 @@ public class Formulario extends javax.swing.JFrame {
         jButton9.setText("C");
 
         jButton10.setText("-");
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
 
         jButton11.setText("*");
 
@@ -337,7 +342,18 @@ public class Formulario extends javax.swing.JFrame {
         if (sinal == "soma"){
             txtResultado.setText(String.valueOf(valor1 + valor2));
         }
+        
+        if(sinal == "subtracao"){
+            txtResultado.setText(String.valueOf(valor1 - valor2));
+        }
     }//GEN-LAST:event_jButton15ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        
+        valor1 = Double.parseDouble(txtResultado.getText());
+        txtResultado.setText("");
+        sinal = "subtracao";
+    }//GEN-LAST:event_jButton10ActionPerformed
 
     /**
      * @param args the command line arguments
