@@ -167,6 +167,11 @@ public class Formulario extends javax.swing.JFrame {
         });
 
         jButton20.setText("/");
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton20ActionPerformed(evt);
+            }
+        });
 
         jPanel1.setBackground(new java.awt.Color(255, 51, 51));
 
@@ -355,6 +360,10 @@ public class Formulario extends javax.swing.JFrame {
         if(sinal == "multiplicacao"){
             txtResultado.setText(String.valueOf(valor1 * valor2));
         }
+        
+        if(sinal == "divisao"){
+            txtResultado.setText(String.valueOf(valor1 / valor2));
+        }
     }//GEN-LAST:event_jButton15ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
@@ -370,6 +379,14 @@ public class Formulario extends javax.swing.JFrame {
         txtResultado.setText("");
         sinal = "multiplicacao";
     }//GEN-LAST:event_jButton11ActionPerformed
+
+    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
+        
+        valor1 = Double.parseDouble(txtResultado.getText());
+        txtResultado.setText("");
+        sinal = "divisao";
+        
+    }//GEN-LAST:event_jButton20ActionPerformed
 
     /**
      * @param args the command line arguments
